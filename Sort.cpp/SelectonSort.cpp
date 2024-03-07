@@ -1,4 +1,4 @@
-// Online C++ compiler to run C++ program online
+ // this program for Accending order
 #include <iostream>
 using namespace std;
 void SelectionSort(int a[], int n)
@@ -37,3 +37,41 @@ int main() {
 5 3 2 1 4
 1 2 3 4 5 
 */
+// this Program for descending order 
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+void SelectionSort(int a[], int n)
+{
+    for(int i=0; i<n ; i++)
+    {
+        int smallest=i;
+        for(int j=i; j<n; j++)
+        {
+            if(a[j]>a[smallest])// if a[i] less than a[smallest] than swap of them
+            swap(a[j],a[smallest]);
+        }
+    }
+}
+int main() {
+    int n; //size of array
+    cin>>n; // input n from user 
+    int a[n]; // create n size of array
+    // input array elemets 
+    for(int i=0; i<n; i++)
+    {
+        cin>>a[i];
+    }
+    SelectionSort(a,n);//function calling
+    
+    for(int i=0; i<n; i++)
+    {
+        cout<<a[i]<<" "; 
+    }
+    return 0;
+}
+/*
+  5
+1 3 2 45 5
+45 5 3 2 1 
+    */
