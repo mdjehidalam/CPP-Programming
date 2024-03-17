@@ -1,0 +1,24 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+    //first of all file open read mode
+    fstream fin;//create object
+    fin.open("C://vs code/text.txt/city.txt", ios::in);
+    system("cls");
+    if(fin.is_open())//checking weahter file open or not 
+    {
+        string st;
+        int i=0;
+        while(getline(fin,st))// till file is not reach to end 
+        {
+            cout<<st<<endl;
+            i++;
+        }
+        cout<<"total no of lines: "<<i<<endl;
+    } else {
+        cout<<"file error"<<endl;
+    }
+    
+}
