@@ -1,0 +1,27 @@
+//without using extra space but have to reverse array
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    int a[n];
+    cin>>n; // taking size of array
+    for(int i=0; i<n ; i++)
+    {
+        cin>>a[i]; 
+    }
+    
+    // reverse array 
+    int start=0, end=n-1;
+    while(start<end)
+    {
+        swap(a[start],a[end]);
+        start++;
+        end--;
+    }
+    for(int i=0; i<n ; i++)
+    {
+        cout<<a[i]<<" ";
+    }
+    
+}
